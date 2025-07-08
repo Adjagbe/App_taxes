@@ -1,7 +1,9 @@
 
 'use client'
 
+import Link from "next/link";
 import FlyonuiScript from "./components/FlyonuiScript";
+import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 import Image from 'next/image'
 
@@ -20,34 +22,34 @@ export default function Home() {
   // }, [])
 
   return (
-    <div className="">
+    <div>
       <Navbar/>
       <div className=" mt-44 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center flex-col ">
         {/* hero */}
-        <h1 className="text-6xl max-sm:text-4xl font-bold text-[#0565AD] w-[50rem] max-sm:w-sm text-center leading-18 max-sm:leading-10">Service de paiement des taxes du District Autonome d'Abidjan</h1>
-        <p className="mt-10 w-5xl text-center text-lg max-sm:w-sm max-sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla  rhoncus orci, 
+        <h1 className="text-6xl max-sm:text-4xl font-bold max-sm:px-3.5 text-[#0565AD] md:w-[45rem] lg:w-[50rem] max-sm:w-xs text-center leading-18 max-sm:leading-10">Service de paiement des taxes du District Autonome d'Abidjan</h1>
+        <p className="mt-10 md:w-[45rem] lg:w-[59rem] px-8  text-center text-lg max-sm:w-xs max-sm:text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla  rhoncus orci, 
           eu eleifend neque pellentesque non. Donec nibh massa,  pretium eget euismod vel, tristique sit amet purus. 
           Sed eu ultricies  elit, non eleifend nisi. Ut id posuere nibh. In ut rhoncus libero. Duis  iaculis augue 
           id nisi condimentum vulputate.
         </p>
 
-        <div className="flex items-center mt-14 gap-8">
-          <button className="h-14 border-[#0565AD] border-2 w-3xs rounded-lg text-[#0565AD] px-4 text-lg font-medium flex justify-center items-center">
+        <div className="flex items-center mt-14 gap-8 max-sm:flex-col">
+          <Link href="/vehicule" className="h-14 border-[#0565AD] hover:bg-[#0565AD] hover:text-white btn shadow-none bg-transparent  border-2 w-3xs rounded-lg text-[#0565AD] px-4 text-lg font-medium flex justify-center items-center">
             Enregistrer mon véhicule
-          </button>
-          <button className="h-14 bg-[#0565AD] text-white w-3xs rounded-lg px-4 text-lg font-medium flex justify-center items-center">
+          </Link>
+          <button className="h-14 hover:border-[#0565AD] hover:border-2 hover:bg-transparent hover:text-[#0565AD] bg-[#0565AD] btn shadow-none border-0 text-white w-3xs rounded-lg px-4 text-lg font-medium flex justify-center items-center">
             Payer ma taxe
           </button>
         </div>
         
         {/* section 1 */}
-        <h1 className="text-4xl max-sm:text-2xl font-bold text-[#374151] w-lg max-sm:w-sm text-center leading-11 mt-22 max-sm:leading-10">
+        <h1 className="text-4xl max-sm:text-2xl font-bold text-[#374151] px-8 md:w-xl max-sm:w-xs text-center leading-11 mt-24 max-sm:leading-10">
           Toutes vos taxes disponibles en un seul endroit
         </h1>
 
-        <div className="flex flex-wrap mt-10 gap-7">
+        <div className="flex flex-wrap mt-20 gap-10 justify-center items-center px-8">
           {/* card1 */}
-          <div className="bg-white rounded w-xs h-74 p-6 flex flex-col space-y-4 ">
+          <div className="bg-white hover:shadow-lg rounded-lg w-xs h-76 p-6 flex flex-col space-y-4 ">
             <span className="bg-[#F77F0026] rounded-full w-28 text-[#F77F00] text-center py-1">Transporteur</span>
             <p className="font-medium text-xl w-40">
               Taxe sur les taxis interurbains, stationnement, parking etc.
@@ -64,15 +66,13 @@ export default function Home() {
             </div>
           </div>
           {/* card 2 */}
-          <div className="bg-white rounded w-xs h-74 p-6 flex flex-col space-y-4 ">
+          <div className="bg-white hover:shadow-lg rounded-lg  w-xs h-76 p-6 flex flex-col space-y-4 ">
             <span className="bg-[#F7D07E29] rounded-full w-20 text-[#F7AE14] py-1 text-center">Publicité</span>
             <p className="font-medium text-xl w-40">
             Pub sur support mobile, banderole
             </p>
             <div className="mt-6">
-            <svg width="55" height="51" viewBox="0 0 95 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path   d="M69.5338 62.3681C71.9841 67.6481 74.2051 68.1087 75.3451 68.1087C76.4851 68.1087 78.7061 67.6481 81.1564 62.3681C83.6264 57.0751 85.1726 48.8956 85.1726 38.9193C85.1726 28.943 83.6264 20.7634 81.1564 15.4704C78.7061 10.1839 76.4916 9.72981 75.3451 9.72981C74.1986 9.72981 71.9841 10.1904 69.5338 15.4704C67.0638 20.7569 65.5177 28.943 65.5177 38.9193C65.5177 48.8956 67.0638 57.0751 69.5338 62.3681ZM55.6902 38.9193C55.6902 48.448 56.9809 57.1789 59.5557 63.9443L15.7384 47.4166C13.9993 46.7601 12.5027 45.596 11.4468 44.0786C10.3909 42.5612 9.82555 40.7619 9.82555 38.9193C9.82555 37.0766 10.3909 35.2773 11.4468 33.7599C12.5027 32.2425 13.9993 31.0784 15.7384 30.4219L59.5426 13.8942C56.9743 20.6596 55.6902 29.397 55.6902 38.9193ZM75.3451 77.8385C88.4484 77.8385 95 60.4157 95 38.9193C95 17.4229 88.4484 0 75.3451 0C71.0145 0 66.7166 0.778385 62.6743 2.30921L12.2464 21.3278C8.64486 22.6857 5.54519 25.0951 3.35816 28.2367C1.17113 31.3783 0 35.1037 0 38.9193C0 42.7348 1.17113 46.4602 3.35816 49.6018C5.54519 52.7434 8.64486 55.1528 12.2464 56.5108L17.6646 58.554C16.8223 60.5581 16.395 62.7093 16.408 64.8799C16.4211 67.0506 16.8741 69.1966 17.7404 71.1907C18.6066 73.1847 19.8684 74.9864 21.4509 76.4887C23.0335 77.991 24.9045 79.1635 26.9532 79.9366C29.0019 80.7097 31.1865 81.0677 33.3776 80.9894C35.5686 80.9111 37.7215 80.3981 39.7086 79.4808C41.6957 78.5635 43.4765 77.2605 44.9455 75.6491C46.4146 74.0378 47.5419 72.1508 48.2607 70.1001L62.6743 75.5293C66.7195 77.0604 71.0143 77.8431 75.3451 77.8385ZM39.0687 66.6233L26.863 62.0308C26.469 62.8399 26.2489 63.7212 26.2168 64.6189C26.1847 65.5166 26.3413 66.4111 26.6767 67.2458C27.012 68.0804 27.5188 68.837 28.1649 69.4677C28.811 70.0983 29.5823 70.5891 30.4301 70.9092C31.2778 71.2292 32.1835 71.3714 33.0896 71.3269C33.9958 71.2823 34.8827 71.0518 35.6942 70.6501C36.5057 70.2484 37.2241 69.6842 37.8038 68.9933C38.3836 68.3023 38.8121 67.4997 39.0622 66.6362" fill="#F77F00"/>
-            </svg>
+              <Image src="/assets/icons/speaker.png" alt="" width={60} height={60}/>
             </div>
             <div className="flex justify-end">
               <svg width="29" height="27" viewBox="0 0 39 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,16 +81,13 @@ export default function Home() {
             </div>
           </div>
           {/* card 3 */}
-          <div className="bg-white rounded w-xs h-74 p-6 flex flex-col space-y-4 ">
+          <div className="bg-white hover:shadow-lg rounded-lg  w-xs h-76 p-6 flex flex-col space-y-4 ">
             <span className="bg-[#0565AD1A] rounded-full w-18 py-1 text-[#0565AD] text-center">Autres</span>
             <p className="font-medium text-xl w-44">
             Entreposage et transport des viandes, Artisanat
             </p>
             <div className="mt-6">
-              <svg width="58" height="58" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M45.9459 6.26605L6.26389 45.948C5.45462 46.7576 5 47.8553 5 49C5 50.1447 5.45462 51.2424 6.26389 52.052L45.948 91.7361C46.7576 92.5454 47.8553 93 49 93C50.1447 93 51.2424 92.5454 52.052 91.7361L91.7339 52.0541C92.5432 51.2446 92.9978 50.1468 92.9978 49.0022C92.9978 47.8575 92.5432 46.7597 91.7339 45.9502L52.0498 6.26389C51.2403 5.45462 50.1425 5 48.9978 5C47.8532 5 46.7554 5.45462 45.9459 6.26389V6.26605Z"/>
-              <path d="M35.5879 49.0001H61.4886M48.5382 36.0498V61.9505"/>
-              </svg>
+              <Image src="/assets/icons/add.png" alt="" width={55} height={55}/>
             </div>
             <div className="flex justify-end">
               <svg width="29" height="27" viewBox="0 0 39 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,10 +97,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-14">
-         <button className="h-14 border-[#0565AD] border-2 w-2xs gap-3 rounded-lg text-[#0565AD] px-4 text-lg font-medium flex justify-center items-center">
+        <div className="mt-18">
+         <button className="h-14 border-[#0565AD] border-2 w-2xs gap-3 rounded-lg text-[#0565AD] px-4 text-lg font-medium flex justify-center items-center hover:bg-[#0565AD] hover:text-white btn shadow-none bg-transparent">
          
-            <p>Enregistrer mon véhicule</p>
+            <p>Voir toute les taxes</p>
             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path  d="M7.571 7.70699L1.914 13.364L0.5 11.95L5.45 6.99999L0.5 2.04999L1.914 0.635986L7.571 6.29299C7.75847 6.48051 7.86379 6.73482 7.86379 6.99999C7.86379 7.26515 7.75847 7.51946 7.571 7.70699Z" fill="#0565AD"/>
           </svg>
@@ -113,13 +110,13 @@ export default function Home() {
 
       {/* section 2 */}
 
-      <div className="bg-white w-full mt-20 py-12">
-          <div className="max-w-8xl  mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-30 justify-center">
-            <div className="max-w-sm">
+      <div className="bg-white w-full mt-24 py-12">
+          <div className="max-w-8xl  mx-auto px-8 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center md:gap-20 lg:gap-30 max-sm:gap-10 justify-center">
+            <div className="max-w-sm mb-6">
               <p className=" text-[#5E6282] text-lg">Comment ça marche ?</p>
-              <p className="text-[#14183E] font-medium text-4xl">Quelques vidéos tutoriels pour faciliter la prise en main de votre plateforme</p>
+              <p className="text-[#14183E] font-medium text-4xl max-sm:text-2xl">Quelques vidéos tutoriels pour faciliter la prise en main de votre plateforme</p>
             </div>
-            <div className="how-taxe w-2xl h-80 rounded-3xl flex items-center justify-center">
+            <div className="how-taxe w-2xl h-80 rounded-3xl  flex items-center justify-center">
             <div className="flex items-end gap-3">
               <svg width="49" height="49" viewBox="0 0 59 69" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M59 9.03202V68.1806L44.2493 59.7358L29.4987 68.1806L14.748 59.7358L0 68.1806V9.03202C0 4.49515 3.68834 0.818359 8.23946 0.818359H50.7605C55.3117 0.818359 59 4.49515 59 9.03202Z" fill="#F77F00"/>
@@ -130,17 +127,18 @@ export default function Home() {
           </div>
       </div>
 
-      {/* section 3 */}
-      <div className="mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center flex-col">
+      
+      <div className="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center flex-col">
 
-        <h1 className="text-4xl max-sm:text-2xl font-bold text-[#374151] w-md max-sm:w-sm text-center leading-11  max-sm:leading-10">
+        {/* section 3 */}
+        <h1 className="text-4xl max-sm:text-2xl font-bold text-[#374151] px-8 md:w-lg  max-sm:w-sm text-center leading-11  max-sm:leading-10">
           Les autres moyens de payer vos taxes
         </h1>
 
-        <div className="flex flex-wrap gap-8 mt-14">
+        <div className="flex flex-wrap gap-8 mt-20 items-center justify-center">
           {/* card1 */}
-          <div className="bg-white rounded-lg w-sm h-66 p-6 flex flex-col space-y-4 ">
-              <p className="font-medium text-2xl text-[#374151]">
+          <div className="bg-white  hover:shadow-lg rounded-lg w-sm max-sm:w-xs h-66 p-6 flex flex-col space-y-4 ">
+              <p className="font-medium text-2xl max-sm:text-xl text-[#374151]">
               Via l'application <br/> Côte d'Ivoire Identité
               </p>
               <div className="flex items-center gap-5 mt-6">
@@ -150,18 +148,89 @@ export default function Home() {
           </div>
 
           {/* card2 */}
-          <div className="bg-white rounded-lg w-sm h-66 p-6 flex flex-col space-y-4 ">
-              <p className="font-medium text-2xl text-[#374151]">
-                Dans une antenne du District Autonome d'Abidjan
+          <div className="bg-white  hover:shadow-lg rounded-lg w-sm  max-sm:w-xs h-66 p-6 flex flex-col space-y-4 ">
+              <p className="font-medium text-2xl max-sm:text-xl text-[#374151] ">
+                Dans une antenne du <br/>
+                 District Autonome <br/> d'Abidjan
               </p>
               <div className="flex items-center gap-5 mt-6">
-                <Image src="/assets/images/2.png" alt="" width={90} height={90}/>
-                <Image src="/assets/images/app.png" alt="" width={130} height={130}/>
+                <Image src="/assets/icons/maket.png" alt="" width={80} height={80}/>
               </div>
           </div>
         </div>
+
+        {/* section 4, FAQ */}
+        <h1 className="text-4xl max-sm:text-2xl font-bold text-[#374151] w-md max-sm:w-sm text-center leading-11 mt-24  max-sm:leading-10">
+          Questions fréquentes
+        </h1>
+
+        <div className="grid md:w-lg lg:w-3xl sm:w-lg mx-auto mt-20  gap-y-3">
+            <details className="group py-4 bg-white hover:shadow  rounded-lg p-8 text-xl max-sm:text-base text-[#383838]">
+                <summary className="flex items-center justify-between font-medium list-none cursor-pointer">
+                    <span>Comment payer une taxe transport</span>
+                    <span className="transition group-open:rotate-180 ">
+                      <Image src="/assets/icons/down.png" alt="" width={15} height={15}/>
+                    </span>
+                </summary>
+                <p className="mt-3 group-open:animate-fadeIn text-lg ">
+                lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla  rhoncus orci, eu 
+                eleifend neque pellentesque non. Donec nibh massa, pretium eget euismod vel, tristique sit 
+                amet purus. Sed eu ultricies  elit, non eleifend nisi. Ut id posuere nibh. In ut rhoncus 
+                libero. Duis  iaculis augue id nisi condimentum vulputate.
+                </p>
+            </details>
+
+            <details className="group py-4 bg-white hover:shadow rounded-lg p-8 text-xl max-sm:text-base text-[#383838]">
+                <summary className="flex items-center justify-between font-medium list-none cursor-pointer">
+                    <span>Comment payer une taxe transport</span>
+                    <span className="transition group-open:rotate-180">
+                    <Image src="/assets/icons/down.png" alt="" width={15} height={15}/>
+                    </span>
+                </summary>
+                <p className="mt-3 group-open:animate-fadeIn text-lg ">
+                lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla  rhoncus orci, eu 
+                eleifend neque pellentesque non. Donec nibh massa, pretium eget euismod vel, tristique sit 
+                amet purus. Sed eu ultricies  elit, non eleifend nisi. Ut id posuere nibh. In ut rhoncus 
+                libero. Duis  iaculis augue id nisi condimentum vulputate.
+                </p>
+            </details>
+
+            <details className="group py-4 bg-white hover:shadow rounded-lg p-8 text-xl max-sm:text-base text-[#383838]">
+                <summary className="flex items-center justify-between font-medium list-none cursor-pointer">
+                    <span>Comment payer une taxe transport</span>
+                    <span className="transition group-open:rotate-180">
+                    <Image src="/assets/icons/down.png" alt="" width={15} height={15}/>
+                    </span>
+                </summary>
+                <p className="mt-3 group-open:animate-fadeIn text-lg ">
+                lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla  rhoncus orci, eu 
+                eleifend neque pellentesque non. Donec nibh massa, pretium eget euismod vel, tristique sit 
+                amet purus. Sed eu ultricies  elit, non eleifend nisi. Ut id posuere nibh. In ut rhoncus 
+                libero. Duis  iaculis augue id nisi condimentum vulputate.
+                </p>
+            </details>
+
+            <details className="group py-4 bg-white hover:shadow rounded-lg p-8 text-xl max-sm:text-base text-[#383838]">
+                <summary className="flex items-center justify-between font-medium list-none cursor-pointer">
+                    <span>Comment payer une taxe transport</span>
+                    <span className="transition group-open:rotate-180">
+                    <Image src="/assets/icons/down.png" alt="" width={15} height={15}/>
+                    </span>
+                </summary>
+                <p className="mt-3 group-open:animate-fadeIn text-lg ">
+                lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla  rhoncus orci, eu 
+                eleifend neque pellentesque non. Donec nibh massa, pretium eget euismod vel, tristique sit 
+                amet purus. Sed eu ultricies  elit, non eleifend nisi. Ut id posuere nibh. In ut rhoncus 
+                libero. Duis  iaculis augue id nisi condimentum vulputate.
+                </p>
+            </details>
+
+          
+
+        </div>
       </div>
 
+      <Footer/>
     </div>
    
     
