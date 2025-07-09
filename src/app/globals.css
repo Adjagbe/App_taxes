@@ -2,7 +2,7 @@
 @plugin "flyonui";
 @import "flyonui/variants.css";
 @source "./node_modules/flyonui/flyonui.js";
-
+@plugin "@iconify/tailwind4";
 
 html, body {
   background-color: #FAFAFA;
@@ -10,7 +10,7 @@ html, body {
   overflow-x: hidden;
 }
 
-.how-taxe{
+.how-taxe {
   background-image: url('/assets/images/1.png');
   background-size: cover;
 

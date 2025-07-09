@@ -20,6 +20,8 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.356",
+    "@iconify/tailwind4": "^1.0.6",
     "@tailwindcss/postcss": "^4",
     "@types/datatables.net": "^1.10.28",
     "@types/jquery": "^3.5.32",
