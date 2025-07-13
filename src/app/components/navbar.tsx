@@ -39,7 +39,7 @@ export default function Navbar() {
     
             <div className="hidden md:flex lg:gap-16 md:gap-6 items-center relative md:left-20 lg:left-0  w-3xl">
                 <Link href="/" className="text-[#0565AD] hover:text-[#0565AD] font-bold text-xl">Accueil</Link>
-                <Link href="/" className="text-black hover:text-[#0565AD] text-xl">Taxes</Link>
+                <Link href="/taxes" className="text-black hover:text-[#0565AD] text-xl">Taxes</Link>
                 <Link href="/contact" className="text-black hover:text-[#0565AD] text-xl">Contacts</Link>
                 <div className="relative lg:left-30 md:left-10">
                     <Link href="/login" className="bg-[#FF772C] btn shadow-none border-0 w-44 flex items-center justify-center gap-2 h-13 text-white rounded hover:bg-[#ff8e16] ">

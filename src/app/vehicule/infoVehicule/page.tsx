@@ -1,10 +1,16 @@
+'use client'
+
 import Navbar from "@/app/components/navbar";
 import Breadcrumb from "../breadcrumb";
 import Footer from "@/app/components/footer";
 import FlyonuiScript from "@/app/components/FlyonuiScript";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function VehiculeInfo(){
+
+    const [codePays, setCodePays] = useState("+225");
+    
     return(
         <div className="min-h-screen">
             <Navbar />
@@ -199,10 +205,12 @@ export default function VehiculeInfo(){
                                                 <div className="relative">
                                                     <select
                                                         id="country-code"
-                                                        name="country-code"
+                                                        name="codePays"
+                                                        value={codePays}
+                                                        onChange={(e) => setCodePays(e.target.value)}
                                                         className="appearance-none bg-gray-100 rounded-lg h-14 px-3 py-2 pr-8 text-[#14183E] font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                     >
-                                                        <option value="+225" selected> 🇨🇮 +225</option>
+                                                        <option value="+225"> 🇨🇮 +225</option>
                                                         <option value="+33">🇫🇷 +33</option>
                                                         <option value="+229">🇧🇯 +229</option>
                                                         <option value="+223">🇲🇱 +223</option>
@@ -248,10 +256,12 @@ export default function VehiculeInfo(){
                                                     <div className="relative">
                                                         <select
                                                             id="country-code"
-                                                            name="country-code"
+                                                            name="codePays"
+                                                            value={codePays}
+                                                            onChange={(e) => setCodePays(e.target.value)}
                                                             className="appearance-none bg-gray-100 rounded-lg h-14 px-3 py-2 pr-8 text-[#14183E] font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                         >
-                                                            <option value="+225" selected> 🇨🇮 +225</option>
+                                                            <option value="+225"> 🇨🇮 +225</option>
                                                             <option value="+33">🇫🇷 +33</option>
                                                             <option value="+229">🇧🇯 +229</option>
                                                             <option value="+223">🇲🇱 +223</option>
@@ -322,10 +332,12 @@ export default function VehiculeInfo(){
                                                             <div className="relative">
                                                                 <select
                                                                     id="country-code"
-                                                                    name="country-code"
+                                                                name="codePays"
+                                                                value={codePays}
+                                                                onChange={(e) => setCodePays(e.target.value)}
                                                                     className="appearance-none bg-gray-100 rounded-lg h-14 px-3 py-2 pr-8 text-[#14183E] font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                                 >
-                                                                    <option value="+225" selected> 🇨🇮 +225</option>
+                                                                    <option value="+225"> 🇨🇮 +225</option>
                                                                     <option value="+33">🇫🇷 +33</option>
                                                                     <option value="+229">🇧🇯 +229</option>
                                                                     <option value="+223">🇲🇱 +223</option>
@@ -359,7 +371,8 @@ export default function VehiculeInfo(){
                                
                             </div>
                         </div>
- 
+
+                        {/* resumé */}
                         <div className="flex flex-col  items-center" data-stepper-content-item='{ "isFinal": true }' style={{display: "none"}}>
                             <h1 className="text-4xl max-sm:text-2xl mt-12  font-bold max-sm:px-3.5 text-[#374151] md:w-[45rem] lg:w-[40rem] max-sm:w-xs text-center leading-12 max-sm:leading-8">
                                Résumé
@@ -419,7 +432,7 @@ export default function VehiculeInfo(){
                                 <div className="w-full flex flex-col space-y-3">
                                     <label className="font-medium text-lg text-[#14183E] ">Type de personne</label>
                                     <select className="lg:w-[15rem] h-14 px-3 text-lg font-medium bg-[#FEFAF6] border-2 border-[#E5905D] py-2 text-[#8A8DA8]  rounded-md  focus:ring-2 focus:ring-[#0565AD] focus:outline-none focus:border-transparent focus:bg-white " >
-                                        <option selected>Personne physique</option>
+                                        <option >Personne physique</option>
                                         <option>Personne moral</option>
                                     </select>
                                 </div>

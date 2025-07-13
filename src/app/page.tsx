@@ -37,9 +37,9 @@ export default function Home() {
           <Link href="/vehicule" className="h-14 border-[#0565AD] hover:bg-[#0565AD] hover:text-white btn shadow-none bg-transparent  border-2 w-3xs rounded-lg text-[#0565AD] px-4 text-lg font-medium flex justify-center items-center">
             Enregistrer mon véhicule
           </Link>
-          <button className="h-14 hover:border-[#0565AD] hover:border-2 hover:bg-transparent hover:text-[#0565AD] bg-[#0565AD] btn shadow-none border-0 text-white w-3xs rounded-lg px-4 text-lg font-medium flex justify-center items-center">
+          <Link href="/taxes" className="h-14 hover:border-[#0565AD] hover:border-2 hover:bg-transparent hover:text-[#0565AD] bg-[#0565AD] btn shadow-none border-0 text-white w-3xs rounded-lg px-4 text-lg font-medium flex justify-center items-center">
             Payer ma taxe
-          </button>
+          </Link>
         </div>
         
         {/* section 1 */}
