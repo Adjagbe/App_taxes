@@ -19,7 +19,7 @@ export default function Footer () {
                 </div>
                 <div className="space-y-2  ">
                     <Link href="/" className=" text-[#374151] hover:underline  block">Accueil</Link>
-                    <Link href="/a-propos" className="text-[#374151] hover:underline   block">Taxes</Link>
+                    <Link href="/taxes" className="text-[#374151] hover:underline   block">Taxes</Link>
                     <Link href="/contact" className="text-[#374151] hover:underline   block">Contacts</Link>
                 </div>
                 <div className="space-y-2 sm:w-[30rem]">

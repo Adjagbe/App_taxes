@@ -72,7 +72,7 @@ export default function Home() {
             Pub sur support mobile, banderole
             </p>
             <div className="mt-6">
-              <Image src="/assets/icons/speaker.png" alt="" width={60} height={60}/>
+              <Image src="/assets/icons/speaker.png" alt="speaker" width={60} height={60}/>
             </div>
             <div className="flex justify-end">
               <svg width="29" height="27" viewBox="0 0 39 37" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -13,15 +13,14 @@ export default function VehiculeInfo(){
     
     return(
         <div className="min-h-screen">
+            <FlyonuiScript />
             <Navbar />
             <Breadcrumb />
             <div className=" mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center flex-col ">
                
-
-            
                 <div data-stepper="" className="w-full flex items-center flex-col">
                  
-                    <ul className="relative flex flex-row gap-x-2 lg:w-4xl">
+                    <ul className="relative flex flex-col md:flex-row gap-2 lg:w-4xl">
                         <li className="group flex flex-1 shrink basis-0 items-center gap-x-2" data-stepper-nav-item='{ "index": 1 }'>
                             <span className="min-h-7.5 min-w-7.5 inline-flex items-center align-middle text-sm">
                                 <span className="stepper-active:bg-[#0565AD] text-white stepper-success:bg-[#0565AD] px-4 py-3 lg:text-lg stepper-completed:bg-[#0565AD] bg-[#B8D7EB]  flex shadow-none shrink-0 items-center justify-center rounded-full font-medium" >
@@ -154,7 +153,7 @@ export default function VehiculeInfo(){
 
                             <div className="  p-10 rounded-lg bg-white  ">
                                 
-                                <nav className="tabs tabs-bordered flex sm:flex-col md:flex-row gap-6 pt-8" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
+                                <nav className="tabs tabs-bordered flex flex-col md:flex-row gap-6 pt-8" aria-label="Tabs" role="tablist" aria-orientation="horizontal">
 
                                     <div className="flex items-center md:w-sm">
                                         <input type="radio" name="type_personne" className="h-5 w-5 peer hidden tab active-tab:tab-active active" id="tabs-basic-filled-item-1" data-tab="#tabs-basic-filled-1" aria-controls="tabs-basic-filled-1" role="tab" aria-selected="true" />
@@ -217,7 +216,7 @@ export default function VehiculeInfo(){
                                                     </select>
                                                 </div>
                                                 <input type="tel" placeholder=""
-                                                    className="lg:w-[17rem] h-14 px-3 text-lg font-medium bg-[#F7F7F7] py-2 text-[#8A8DA8]  rounded-md  focus:ring-2 focus:ring-[#0565AD] focus:outline-none focus:border-transparent focus:bg-white " />
+                                                    className="lg:w-[17rem] w-36 h-14 px-3 text-lg font-medium bg-[#F7F7F7] py-2 text-[#8A8DA8]  rounded-md  focus:ring-2 focus:ring-[#0565AD] focus:outline-none focus:border-transparent focus:bg-white " />
                                             </div>
                                         </div>
 
@@ -268,7 +267,7 @@ export default function VehiculeInfo(){
                                                         </select>
                                                     </div>
                                                     <input type="tel" placeholder=""
-                                                        className="lg:w-[17rem] h-14 px-3 text-lg font-medium bg-[#F7F7F7] py-2 text-[#8A8DA8]  rounded-md  focus:ring-2 focus:ring-[#0565AD] focus:outline-none focus:border-transparent focus:bg-white " />
+                                                        className="lg:w-[17rem] w-36 h-14 px-3 text-lg font-medium bg-[#F7F7F7] py-2 text-[#8A8DA8]  rounded-md  focus:ring-2 focus:ring-[#0565AD] focus:outline-none focus:border-transparent focus:bg-white " />
                                                 </div>
                                             </div>
 
@@ -344,7 +343,7 @@ export default function VehiculeInfo(){
                                                                 </select>
                                                             </div>
                                                             <input type="tel" placeholder=""
-                                                                className="lg:w-[43rem] h-14 px-3 text-lg font-medium bg-[#F7F7F7] py-2 text-[#8A8DA8]  rounded-md  focus:ring-2 focus:ring-[#0565AD] focus:outline-none focus:border-transparent focus:bg-white " />
+                                                                className="lg:w-[43rem] w-38 h-14 px-3 text-lg font-medium bg-[#F7F7F7] py-2 text-[#8A8DA8]  rounded-md  focus:ring-2 focus:ring-[#0565AD] focus:outline-none focus:border-transparent focus:bg-white " />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -412,10 +411,10 @@ export default function VehiculeInfo(){
                                     <input type="text" placeholder=""
                                         className="lg:w-[18rem] h-14 px-3 text-lg font-medium bg-[#FEFAF6] border-2 border-[#E5905D] py-2 text-[#8A8DA8]  rounded-md  focus:ring-2 focus:ring-[#0565AD] focus:outline-none focus:border-transparent focus:bg-white " />
                                 </div>
-                                <div className=" lg:w-[18rem]">
+                                <div className=" lg:w-[18rem] w-60">
                                     <div className="items-center justify-center  mx-auto">
                                         <label className="flex justify-center w-full h-14 p-4 transition bg-[#79747E] rounded-md appearance-none cursor-pointer hover:border-gray-400 focus:outline-none" id="drop">
-                                            <p className="flex items-center flex-col lg:flex-row space-x-2">
+                                            <p className="flex items-center flex-row space-x-2">
                                                 <svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M14 14.4375C14 16.2575 13.3187 17.8062 11.956 19.0837C10.5933 20.3612 8.94133 21 7 21C5.05867 21 3.40667 20.3612 2.044 19.0837C0.681333 17.8062 0 16.2575 0 14.4375V4.725C0 3.4125 0.490187 2.29705 1.47056 1.37865C2.45093 0.460251 3.64075 0.000700798 5.04 7.98479e-07C6.43925 -0.000699201 7.62944 0.458851 8.61056 1.37865C9.59168 2.29845 10.0815 3.4139 10.08 4.725V13.9125C10.08 14.7175 9.78133 15.4 9.184 15.96C8.58667 16.52 7.85867 16.8 7 16.8C6.14133 16.8 5.41333 16.52 4.816 15.96C4.21867 15.4 3.92 14.7175 3.92 13.9125V4.2H6.16V13.9125C6.16 14.14 6.23952 14.3283 6.39856 14.4774C6.5576 14.6265 6.75808 14.7007 7 14.7C7.24192 14.6993 7.44277 14.6248 7.60256 14.4763C7.76235 14.328 7.84149 14.14 7.84 13.9125V4.725C7.82133 3.99 7.54619 3.36875 7.01456 2.86125C6.48293 2.35375 5.82475 2.1 5.04 2.1C4.25525 2.1 3.59259 2.35375 3.052 2.86125C2.51141 3.36875 2.24075 3.99 2.24 4.725V14.4375C2.22133 15.68 2.67867 16.7346 3.612 17.6012C4.54533 18.4678 5.67467 18.9007 7 18.9C8.30667 18.9 9.41733 18.4671 10.332 17.6012C11.2467 16.7353 11.7227 15.6807 11.76 14.4375V4.2H14V14.4375Z" fill="#B8B8B8" />
                                                 </svg>
@@ -503,8 +502,8 @@ export default function VehiculeInfo(){
 
                         </div>
 
-                        <div className="mt-5 flex flex-col lg:flex-row lg:items-center lg:justify-between  gap-x-2">
-                            <button type="button" className="btn bg-transparent shadow-none border-0 lg:text-xl text-gray-600 pt-8" data-stepper-back-btn="">
+                        <div className="mt-5 flex flex-col md:flex-row md:items-center md:justify-between  gap-2">
+                            <button type="button" className="btn w-[14rem] bg-transparent shadow-none border-0 lg:text-xl text-gray-600 pt-8" data-stepper-back-btn="">
                                 <span className="icon-[tabler--chevron-left]  rtl:rotate-180"></span>
                                 Précédent
                             </button>
@@ -524,7 +523,7 @@ export default function VehiculeInfo(){
                
             </div>
             <Footer />
-            <FlyonuiScript/>
+           
         </div>
     )
 }

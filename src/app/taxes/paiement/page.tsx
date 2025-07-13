@@ -35,7 +35,7 @@ export default function paiement(){
                                 <input type="text" placeholder=""
                                     className="lg:w-xs h-14 px-3 text-lg font-medium bg-[#FEFAF6] border-2 border-[#E5905D] py-2 text-[#8A8DA8]  rounded-md  focus:ring-2 focus:ring-[#0565AD] focus:outline-none focus:border-transparent focus:bg-white " />
                             </div>
-                            <div className="flex justify-between items-center lg:w-[42rem] rounded-md p-5 bg-[#FEFAF6] border-2 border-[#E5905D]">
+                            <div className="flex justify-between flex-col md:flex-row md:items-center gap-2 lg:w-[42rem] rounded-md p-5 bg-[#FEFAF6] border-2 border-[#E5905D]">
                                 <div className="text-xl text-[#14183E]">
                                     <p className="font-medium" >Somme restante à payer</p>
                                     <p>Période 04/2025 - 06/2025</p>
@@ -45,7 +45,7 @@ export default function paiement(){
                                 </div>
                             </div>
                         </div>
-                       <div className="grid place-content-end lg:mr-10 ">
+                       <div className="grid lg:place-content-end lg:mr-10 ">
                             <Link href="/taxes/confirm" className="h-14 mt-5 hover:border-[#0565AD] hover:border-2 hover:bg-transparent hover:text-[#0565AD] bg-[#0565AD] btn shadow-none border-0 text-white w-[14rem] rounded-lg px-4 text-lg font-medium flex justify-center items-center">
                                 Payer
                             </Link>

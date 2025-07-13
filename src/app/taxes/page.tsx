@@ -20,7 +20,7 @@ export default function taxes() {
                     <form className=" sm:w-full lg:w-3xl p-7 rounded-lg bg-white flex flex-col space-y-4 ">
                         <label className="font-medium text-lg ">Entrer la plaque d'immatriculation du véhicule</label>
                         <input id="" type="text" placeholder=""
-                            className="w-full h-14 px-3 tex-xl font-medium bg-[#F7F7F7] py-2 text-[#8A8DA8]  rounded-md  focus:ring-2 focus:ring-[#0565AD] focus:outline-none focus:border-transparent focus:bg-white " />
+                            className="lg:w-full h-14 px-3 tex-xl font-medium bg-[#F7F7F7] py-2 text-[#8A8DA8]  rounded-md  focus:ring-2 focus:ring-[#0565AD] focus:outline-none focus:border-transparent focus:bg-white " />
                         <div className="flex flex-col space-y-3 mt-2">
                             <label className="font-medium text-lg text-[#14183E] ">Entrer un numéro de téléphone lié au véhicule </label>
                             <div className="flex items-center space-x-4">
@@ -39,7 +39,7 @@ export default function taxes() {
                                     </select>
                                 </div>
                                 <input type="tel" placeholder=""
-                                    className="lg:w-[43rem] h-14 px-3 text-lg font-medium bg-[#F7F7F7] py-2 text-[#8A8DA8]  rounded-md  focus:ring-2 focus:ring-[#0565AD] focus:outline-none focus:border-transparent focus:bg-white " />
+                                    className="lg:w-[43rem] w-40 h-14 px-3 text-lg font-medium bg-[#F7F7F7] py-2 text-[#8A8DA8]  rounded-md  focus:ring-2 focus:ring-[#0565AD] focus:outline-none focus:border-transparent focus:bg-white " />
                             </div>
                         </div>
                         <Link href="/taxes/paiement" className="h-14 mt-5 hover:border-[#0565AD] hover:border-2 hover:bg-transparent hover:text-[#0565AD] bg-[#0565AD] btn shadow-none border-0 text-white w-[14rem] rounded-lg px-4 text-lg font-medium flex justify-center items-center">

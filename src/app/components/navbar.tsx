@@ -10,10 +10,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
 
-    const handleLogout = () => {
-        console.log('Déconnexion...');
-        router.push('/login');
-    };
+
 
     return(
         <nav className="bg-white py-4 fixed top-0 w-full z-50">
@@ -21,10 +18,10 @@ export default function Navbar() {
             {/* web menu */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
             {/* Logo  */}
-            <div className=' flex items-center gap-8'>
+            <Link href="/" className=' flex items-center gap-8'>
                     <Image
                     src="/assets/images/logo_district.png"
-                    alt=''
+                    alt='logo_district'
                     width={60}
                     height={60}/>
             
@@ -35,7 +32,7 @@ export default function Navbar() {
                         </svg>
                         <p className='font-semibold text-black text-lg'>taxes.district<span className='text-[#FF772C]'>.ci</span></p>
                     </div>
-            </div>
+            </Link>
     
             <div className="hidden md:flex lg:gap-16 md:gap-6 items-center relative md:left-20 lg:left-0  w-3xl">
                 <Link href="/" className="text-[#0565AD] hover:text-[#0565AD] font-bold text-xl">Accueil</Link>
@@ -78,15 +75,15 @@ export default function Navbar() {
                 
 
                 <Link href="/" className="text-[#0565AD] hover:text-[#0565AD] font-bold text-xl block py-2">Accueil</Link>
-                <Link href="/" className="text-black hover:text-[#0565AD] text-xl block py-2">Taxes</Link>
+                <Link href="/taxes" className="text-black hover:text-[#0565AD] text-xl block py-2">Taxes</Link>
                 <Link href="/contact" className="text-black hover:text-[#0565AD] text-xl block py-2">Contacts</Link>
                 
-                <button className="bg-[#FF772C] mt-3 btn shadow-none border-0 w-44 flex items-center justify-center gap-2 h-13 text-white rounded hover:bg-[#ff8e16] ">
+                <Link href="/login" className="bg-[#FF772C] mt-3 btn shadow-none border-0 w-44 flex items-center justify-center gap-2 h-13 text-white rounded hover:bg-[#ff8e16] ">
                         <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.33333 8.72014V5.50283C4.33333 4.43623 4.77232 3.41331 5.55372 2.65911C6.33512 1.90491 7.39493 1.4812 8.5 1.4812C9.60507 1.4812 10.6649 1.90491 11.4463 2.65911C12.2277 3.41331 12.6667 4.43623 12.6667 5.50283V8.72014M2.66667 8.72014H14.3333C15.2538 8.72014 16 9.44036 16 10.3288V15.9591C16 16.8475 15.2538 17.5677 14.3333 17.5677H2.66667C1.74619 17.5677 1 16.8475 1 15.9591V10.3288C1 9.44036 1.74619 8.72014 2.66667 8.72014Z" stroke="white"  />
                         </svg>
                         <p>Votre espace</p>
-                </button>
+                </Link>
             </div>
             )}
       </nav>

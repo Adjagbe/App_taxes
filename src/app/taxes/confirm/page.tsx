@@ -27,7 +27,7 @@ export default function confirm(){
                         <p className="text-[#01A455] text-lg">Paiement accepté !</p>
 
                     </div>
-                    <div className=" flex items-center justify-center space-x-6 ">
+                    <div className=" flex flex-col md:flex-row items-center justify-center space-x-6 ">
                         <button className="h-14 mt-5   bg-[#F77F00] btn shadow-none border-0 text-white w-xs rounded-lg px-4 text-lg font-medium flex justify-center items-center">
                             <p>Attestation d'acquittement</p>
                             <svg width="24" height="24" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
